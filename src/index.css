@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+body{
+  margin:0;
+  height: fit-content;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header{
+    display: flex;
+    position: fixed;
+    top:0;
+    width: 98%;
+    padding: 20px 15px 10px;
+    height: 90px;
+    justify-content: space-between;
+    background:linear-gradient(to left, whitesmoke, #AA4465);
+    color:Black;
+    box-shadow:0 0 10px grey;
+	z-index: 1;
+	overflow: hidden;
+}
+ 
+.is-sticky {
+    width: 98%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background:linear-gradient(to left, whitesmoke, #AA4465);
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s; 
+
+}
+.header div{
+    display: flex;
+    justify-content: space-between;
+}
+.data-1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 46px;
+    letter-spacing: 2px;
+    font-family: 'Dancing Script', serif;
+    font-weight: 400;
+    color:white;
+    padding :20px 10px 0;
+    background: rgba(170,68,101,0.5);
+	position: relative;
+	box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
+
+    
+}
+.data-1:after, .data-1:before{
+	mix-blend-mode:multiply;
+	filter:none;
+	z-index: -1;
+	content:'';
+	width:calc(100% + (50px * 2));
+	height:calc(100% + (50px * 2));
+	position: absolute;
+	display: block;
+	animation: border 10s ease-in-out infinite;
+	transform:translateX(-50px) translateY(-50px);
+}
+@keyframes border {
+    0%, 100% {
+      -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+              clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+    }
+    50% {
+      -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+              clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+    }
+}
+  
+.data-1:after{
+      animation-delay: -5s;
+      background-color: #93e1d8;
+      clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+}
+.data-1:before {
+      background-color: #AA4465;
+        clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+}
+
+.data-2{
+    padding: 30px 0 15px;
+    font-size: 24px;
+    font-weight: 200;
+    font-family: 'Dancing Script', serif;
+    justify-content: space-between;
+}
+
+.header-cat{
+    padding:0 30px;
+    padding-top: 10px;
+    border-left:2px solid #850E35;
+    box-shadow: inset 0 0 0 0 #850E35;
+    transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
+}
+.header-cat a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+.header-cat:hover{
+    box-shadow: inset 150px 0 0 0 #850E35;
+    color: white;
+  }
+.data-3{
+    font-size: 20px;
+    font-family: 'Dancing Script', serif;
+
+}
+.header-con-1{
+    padding-right: 10px;
+    padding-top: 40px;
+    font-size: 22px;
+    color: #411530;
+    font-weight: 1000;
+    letter-spacing: 2px;
+
+}
+.header-con-2{
+    padding-left: 10px;
+    padding-top: 30px;
+    font-size: 40px;
+    color: #411530;
+    font-weight: 1000;
+
 }
